@@ -81,7 +81,7 @@ endfunction
 
 let s:_lightline = {
       \   'active': {
-      \     'left': [['mode', 'paste'], ['readonly', 'filename', 'modified']],
+      \     'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']],
       \     'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype']]
       \   },
       \   'inactive': {
@@ -107,7 +107,9 @@ let s:_lightline = {
       \   'component_visible_condition': {
       \     'modified': '&modified||!&modifiable', 'readonly': '&readonly', 'paste': '&paste', 'spell': '&spell'
       \   },
-      \   'component_function': {},
+      \   'component_function': {
+      \     'gitbranch': 'FugitiveHead'
+      \   },
       \   'component_function_visible_condition': {},
       \   'component_expand': {
       \     'tabs': 'lightline#tabs'

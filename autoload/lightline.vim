@@ -107,7 +107,7 @@ let s:_lightline = {
       \
       \   },
       \   'component_visible_condition': {
-      \     'modified': '&modified||!&modifiable', 'readonly': '&readonly', 'paste': '&paste', 'spell': '&spell', 'venv': '$VIRTUAL_ENV'
+      \     'modified': '&modified||!&modifiable', 'readonly': '&readonly', 'paste': '&paste', 'spell': '&spell', 'venv': '$VIRTUAL_ENV != ""'
       \   },
       \   'component_function': {
       \     'gitbranch': 'FugitiveHead',

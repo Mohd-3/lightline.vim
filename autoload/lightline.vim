@@ -114,20 +114,20 @@ let s:_lightline = {
       \   },
       \   'component_function_visible_condition': {},
       \   'component_expand': {
-      \     'tabs': 'lightline#tabs'
+      \     'tabs': 'lightline#tabs',
       \     'linter_checking': 'lightline#ale#checking',
       \     'linter_infos': 'lightline#ale#infos',
       \     'linter_warnings': 'lightline#ale#warnings',
       \     'linter_errors': 'lightline#ale#errors',
-      \     'linter_ok': 'lightline#ale#ok',
+      \     'linter_ok': 'lightline#ale#ok'
       \   },
       \   'component_type': {
-      \     'tabs': 'tabsel', 'close': 'raw'
+      \     'tabs': 'tabsel', 'close': 'raw',
       \     'linter_checking': 'right',
       \     'linter_infos': 'right',
       \     'linter_warnings': 'warning',
       \     'linter_errors': 'error',
-      \     'linter_ok': 'right',
+      \     'linter_ok': 'right'
       \   },
       \   'component_raw': {},
       \   'tab_component': {},

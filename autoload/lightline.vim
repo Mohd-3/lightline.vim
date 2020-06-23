@@ -82,7 +82,7 @@ endfunction
 let s:_lightline = {
       \   'active': {
       \     'left': [['mode', 'paste'], ['venv', 'gitbranch', 'readonly', 'filename', 'modified']],
-      \     'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype']]
+      \     'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ], ['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype']]
       \   },
       \   'inactive': {
       \     'left': [['filename']],
@@ -115,9 +115,19 @@ let s:_lightline = {
       \   'component_function_visible_condition': {},
       \   'component_expand': {
       \     'tabs': 'lightline#tabs'
+      \     'linter_checking': 'lightline#ale#checking',
+      \     'linter_infos': 'lightline#ale#infos',
+      \     'linter_warnings': 'lightline#ale#warnings',
+      \     'linter_errors': 'lightline#ale#errors',
+      \     'linter_ok': 'lightline#ale#ok',
       \   },
       \   'component_type': {
       \     'tabs': 'tabsel', 'close': 'raw'
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
       \   },
       \   'component_raw': {},
       \   'tab_component': {},

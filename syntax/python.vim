@@ -1,3 +1,4 @@
+syntax off
 syn keyword pythonStatement break continue del
 syn keyword pythonStatement exec return
 syn keyword pythonStatement pass raise
@@ -234,3 +235,4 @@ hi def link  pythonBuiltinFunc  pythonBuiltin
 hi def link  pythonBooleanNone  pythonBoolean
 
 hi def link  pythonExClass      Structure
+syntax on

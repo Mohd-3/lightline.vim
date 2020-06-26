@@ -121,7 +121,8 @@ syn match   pythonFloat "\<[0-9][0-9_]*\.[0-9_]*\([eE][+-]\=[0-9_]*[0-9][0-9_]*\
 syn match   pythonOctError  "\<0[oO]\=[0-7_]*[8-9][0-9_]*[lL]\=\>" display
 syn match   pythonBinError  "\<0[bB][01_]*[2-9][0-9_]*[lL]\=\>" display
 
-syn keyword pythonBuiltinObj True False Ellipsis None NotImplemented
+syn keyword pythonBuiltinObj Ellipsis NotImplemented
+syn keyword pythonBooleanNone  True False None
 syn keyword pythonBuiltinObj __debug__ __doc__ __file__ __name__ __package__
 
 syn keyword pythonBuiltinType type object
@@ -230,5 +231,6 @@ hi def link  pythonBinError     Error
 hi def link  pythonBuiltinType  pythonBuiltin
 hi def link  pythonBuiltinObj   pythonBuiltin 
 hi def link  pythonBuiltinFunc  pythonBuiltin 
+hi def link  pythonBooleanNone  pythonBoolean
 
 hi def link  pythonExClass      Structure
